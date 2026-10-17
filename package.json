@@ -1,0 +1,39 @@
+{
+  "name": "opencode-3d-video-mod",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "OpenCode mod: agent-driven 3D modeling + video editing MCP server with a Three.js web viewport.",
+  "bin": {
+    "creator-mcp": "bin/mcp.js",
+    "creator-ui": "bin/ui.js"
+  },
+  "scripts": {
+    "mcp": "node bin/mcp.js",
+    "ui": "node bin/ui.js",
+    "setup": "node bin/setup.js",
+    "test": "node --test \"tests/*.test.mjs\"",
+    "test:mouse": "node --test tests/mouse.test.mjs",
+    "test:video": "node --test tests/video.test.mjs",
+    "test:mcp": "node --test tests/mcp.test.mjs",
+    "doctor": "node bin/setup.js",
+    "demo": "node bin/demo.js",
+    "movie": "node bin/movie.js",
+    "movie:fast": "node bin/movie.js --fast",
+    "movie:dry": "node bin/movie.js --dry",
+    "movie:voice": "node scripts/movie-voice.mjs",
+    "movie:thumb": "node scripts/movie-thumbnail.mjs",
+    "movie:verify": "node scripts/verify-movie.mjs",
+    "movie:script": "node scripts/movie-script.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "ffmpeg-static": "^5.3.0",
+    "ffprobe-static": "^3.1.0",
+    "three": "^0.186.1",
+    "ws": "^8.22.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  // Registers the "creator" MCP server for this project.
+  // OpenCode exposes its tools as tools.creator.<tool>(...) in Code Mode.
+  "mcp": {
+    "servers": {
+      "creator": {
+        "type": "local",
+        "command": ["node", "bin/mcp.js"],
+        "cwd": ".",
+        "environment": {
+          "CREATOR_EXPORT_DIR": "exports"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+# Dependencies & build artifacts
+node_modules/
+tmp/
+
+# Large generated video/audio artifacts (regenerate with npm run movie / npm run demo)
+exports/movie.mp4
+exports/movie-new.mp4
+exports/_showreel_fast.mp4
+exports/movie.srt
+exports/movie.description.txt
+exports/movie.chapters.ffmeta
+
+# Generated renders / scenes
+exports/thumbnail.png
+exports/computer-mouse.png
+exports/project.json
+
+# Tracked asset: the demo showreel ships in the repo
+# exports/showreel.mp4
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/

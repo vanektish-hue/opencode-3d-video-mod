@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Creator 3D · Video Studio</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header id="topbar">
+  <div class="brand">
+    <span class="logo-dot"></span>
+    <strong>Creator Studio</strong>
+    <span id="scene-name" class="muted">no scene</span>
+  </div>
+  <div class="toolbar" id="view-tools">
+    <button data-view="persp" class="active">Persp</button>
+    <button data-view="front">Front</button>
+    <button data-view="side">Side</button>
+    <button data-view="top">Top</button>
+    <button data-view="back">Back</button>
+    <span class="sep"></span>
+    <button id="btn-shade">Shading</button>
+    <button id="btn-wire">Wireframe</button>
+    <button id="btn-grid">Grid</button>
+    <span class="sep"></span>
+    <button id="btn-preview">CPU render</button>
+  </div>
+  <div class="status">
+    <span id="ws-status" class="badge">connecting…</span>
+  </div>
+</header>
+
+<main id="layout">
+  <section id="viewport-wrap">
+    <canvas id="viewport"></canvas>
+    <div id="preview-panel" class="hidden">
+      <div class="panel-head">
+        <span>CPU preview</span>
+        <button id="preview-close" title="Закрыть">×</button>
+      </div>
+      <img id="preview-img" alt="CPU preview" />
+      <div id="preview-meta" class="muted small"></div>
+    </div>
+  </section>
+
+  <aside id="side">
+    <div class="side-block" id="scene-block">
+      <div class="side-title">Сцена</div>
+      <pre id="scene-stats" class="stats"></pre>
+      <div id="node-tree" class="tree"></div>
+    </div>
+    <div class="side-block">
+      <div class="side-title">Таймлайн</div>
+      <div id="timeline-panel"></div>
+    </div>
+  </aside>
+</main>
+
+<footer id="statusbar">
+  <span id="fps-counter" class="muted"></span>
+  <span id="hover-info" class="muted"></span>
+</footer>
+
+<script type="importmap">
+{ "imports": { "three": "/vendor/three/build/three.module.js" } }
+</script>
+<script type="module" src="/viewport.js"></script>
+<script type="module" src="/timeline.js"></script>
+<script type="module" src="/app.js"></script>
+</body>
+</html>
